@@ -1,7 +1,7 @@
 # Portfolio-Updated-2020
 React.js , Graphql, HTML, CSS, JavaScript and Dependecies
 
-In the attached folders there are snippets of code that connect an input table with Graphql integrations in AWS Appsync, Javascript projects, . The computational algorithm is left out due to the nature of this portfolio excercise. 
+In the attached folders there are snippets of code that connect an input table with Graphql integrations in AWS Appsync, Javascript projects, and other files. 
 
 <h3>Project One</h3>
 <hr/>
