@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <header>
+
+        </header>
+       <link rel='stylesheet' type ='text/css' href='style2.css'>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+       <script>  
+
+       $(function(){
+           var $students = $('#students')
+
+           $.ajax({
+               type: 'GET',
+               url: "http://intranet.eckerd.edu/signage/admissions-scroller/admissions.json",
+               xhrFields:{
+                   withCrendentials: false
+               },        
+            success: function(students){
+                    var i = 0;
+                    var len = $('#slides ul li').length;
+                    var timeLoop;
+
+                    timeLoop= setInterval(function k(){             
+                                $('#slides ul li').hide(); // hide all the li elements
+                                $('#slides ul li').eq(i).css('color','black').show().end('ul.students'); // show the current li
+                                i = i + 1;
+                                if(i > length){
+                                    (timeLoop); 
+                                }
+                    }, 5000); // set Time for slides here
+                $.each(students, function(index, studentinfo){
+                    for(x in studentinfo){
+                        $students.append('<li>'+'<br/>' +studentinfo[x].Preferred + ' ' + studentinfo[x].Last +'<br/>' + studentinfo[x].City + ','+ ' '+ studentinfo[x].Region+'</li>')
+                    }
+                   
+                })   
+            }
+           })
+       })
+
+      function autoRefresh(){
+          window.location = window.location.href;
+      }
+      setInterval('autoRefresh()', 15000);
+            
+    </script>
+    </head>
+    <header style="background-color:white; text-align:center; font-size: 95px; color:#00A3C9; width: 100%;">Welcome to Campus</header>
+    <body style="background-color: white">
+        <div id='slides'>
+            <ul id="students"></ul>
+
+        </div>   
+            </body>
+        
+        
+</html>

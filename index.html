@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <header>
+
+        </header>
+       <link rel='stylesheet' type ='text/css' href='styles.css'>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+       <script>  
+
+       $(function(){
+           var $students = $('#students')
+           $.ajax({
+               type: 'GET',
+               url: "http://intranet.eckerd.edu/signage/admissions-scroller/admissions.json",
+               xhrFields:{
+                   withCrendentials: false
+               },
+            success: function(students){
+                $.each(students, function(index, studentinfo){
+                    for(x in studentinfo){
+                        $students.append('<li>'+'<br/>' +studentinfo[x].Preferred + ' ' +studentinfo[x].Last+'</li>'+'<br/>')
+                        $students.append('<li>' + studentinfo[x].City + ','+ ' '+ studentinfo[x].Region+'</li>'+'<br/>'+'<br/>'+'<br/>'+'<br/>'+'<br/>'+'<br/>'+'<br/>'+'<br/>'+'<br/>')
+                       
+                    }
+                })   
+            }
+           })
+       })
+            
+                
+        
+            
+    </script>
+    </head>
+    <header style="background-color:white; text-align:center; font-size: 95px; color:#00A3C9; width: 100%;">Welcome to Campus</header>
+    <body style="background-color: white">
+        <div class='scroll-up'>
+            <ul id="students">
+                
+            </ul>
+
+        </div>   
+            </body>
+        
+        
+</html>
+
