@@ -12,7 +12,7 @@ In the attached folders there are snippets of code that connect an input table w
 <b> Forms folder</b><br/>
    Forms are exported to the Organizer via imports usuing the file <b>IncomeUI</b>. This form is a mixture of React Bootstrap and Material UI which takes user inputed information and submits it to a dynamoDB table 
      called IncomeTable.
-   Each input has an ID attributed to it that is user specific and based off of a authenication token (AWS Cognito)<br/><br/>
+   Each input has an ID attributed to it that is user specific and based off of an authenication token (AWS Cognito)<br/><br/>
 <b>Data that is entered into the dynamoDB table through a Graphql mutation that leverages the Apollo client</b><br/>
    Accessing the user specific information using a query to list the items using strong syntax is available to view in the <b>                schema.graphql file </b><br/>
     
