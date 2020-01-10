@@ -18,7 +18,8 @@ In the attached folders there are snippets of code that connect an input table w
 <hr/>
 
 <b> This project is an automatic name displayer built for the admissions office</b><br/>
-   The objective was to change the names and amount of list items being shown from a list of students where the amount is different each         day. The project is built in two ways: <br/>
+   The objective was to change the names and amount of list items being shown from a list of students where the amount is different each         day. 
+   <br/><b>The project is built in two ways:</b> <br/>
    The <b>first</b> approach is a list that scrolls up the screen simliar to the end credits of a movie. <b>(index.html)</b><br/>
    <b>Pros:</b> Automatically scales to the amount of student in a list<br/>
    <b>Cons:</b> Manually adjust the speed of scrolling to make sure the names are able to be read.<br/>
