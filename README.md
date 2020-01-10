@@ -18,10 +18,10 @@ In the attached folders there are snippets of code that connect an input table w
 <hr/>
 
 <b> This project is an automatic name displayer built for the admissions office</b><br/>
-   The objective was to change the names and amount of list items being show from a list of students where the amount is different each         day. The project is built       two ways: <br/>
-   The <b>first</b> approach is a list that scrolls onto the screen simliar to the end credits of a movie. <b>(index.html)</b><br/>
+   The objective was to change the names and amount of list items being shown from a list of students where the amount is different each         day. The project is built in two ways: <br/>
+   The <b>first</b> approach is a list that scrolls up the screen simliar to the end credits of a movie. <b>(index.html)</b><br/>
    <b>Pros:</b> Automatically scales to the amount of student in a list<br/>
-   <b>Cons:</b> Manually adjust the speed of the scrolling to make sure the names are able to be read.<br/>
+   <b>Cons:</b> Manually adjust the speed of scrolling to make sure the names are able to be read.<br/>
    
    The <b>second</b> approach makes the names appear on the screen one at a time.<b>index2.hmtl</b><br/>
    <b> Pros:</b> Each name appears one at time at an interval that is preset<br/>
