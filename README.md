@@ -7,14 +7,12 @@ In the attached folders there are snippets of code that connect an input table w
 <hr/>
 
 <b>The Organizer folder houses a plethora of other components (code is available to view)</b><br/>
-   <b>Organizer.js</b> is the main stem of the Organizer folder that all the other components attach. I utilize isolation of code to be 
-    sure that each section is operating smoothly while also making it easier to navigate.<br/><br/>
+   <b>Organizer.js</b> is the main stem of the Organizer folder that all the other components attach. Utilizing isolation of code is a       way to be sure that each section is operating independently first before they ar merged.<br/><br/>
 <b> Forms folder</b><br/>
-   Forms are exported to the Organizer via imports usuing the file <b>IncomeUI</b>. This form is a mixture of React Bootstrap and Material UI which takes user inputed information and submits it to a dynamoDB table 
-     called IncomeTable.
+   Forms are exported to the Organizer.js file via imports usuing the file <b>IncomeUI</b>. This form is a mixture of React Bootstrap and Material UI which takes user inputed information and submits it to a dynamoDB table.
    Each input has an ID attributed to it that is user specific and based off of an authenication token (AWS Cognito)<br/><br/>
-<b>Data that is entered into the dynamoDB table through a Graphql mutation that leverages the Apollo client</b><br/>
-   Accessing the user specific information using a query to list the items using strong syntax is available to view in the <b>                schema.graphql file </b><br/>
+<b>Data that is entered into the dynamoDB table through a Graphql mutation that leverages an Apollo client</b><br/>
+   Accessing the user specific information is acheived by using a query to list the items using strong syntax is (available to view in the <b> schema.graphql file) </b><br/>
     
 <h3>Project Two </h3>
 <hr/>
