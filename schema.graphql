@@ -1,0 +1,127 @@
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Income {
+  allowances: Int
+  earnedIncome: Int!
+  id: ID!
+  investmentIncome: Int
+  miscIncome: Int
+  passiveIncome: Int
+  variableIncome: Int
+}
+
+type IncomeConnection {
+  items: Income
+  nextToken: String
+}
+
+type Mutation {
+  createIncome(input: CreateIncomeInput!): Income
+  deleteIncome(input: DeleteIncomeInput!): Income
+  updateIncome(input: UpdateIncomeInput!): Income
+}
+
+type Query {
+  fetchIncome(id: ID!): Income
+  getIncome(id: ID!): Income
+  listIncomes(filter: TableIncomeFilterInput, limit: Int, nextToken: String): IncomeConnection
+}
+
+type Subscription {
+  onCreateIncome(earnedIncome: [Int!], id: ID, passiveIncome: [Int], variableIncome: [Int]): Income @aws_subscribe(mutations : ["createIncome"])
+  onDeleteIncome(earnedIncome: [Int!], id: ID, name: String, passiveIncome: [Int], variableIncome: [Int]): Income @aws_subscribe(mutations : ["deleteIncome"])
+  onUpdateIncome(earnedIncome: [Int!], id: ID, passiveIncome: [Int], variableIncome: [Int]): Income @aws_subscribe(mutations : ["updateIncome"])
+}
+
+input CreateIncomeInput {
+  allowances: Int
+  earnedIncome: Int!
+  investmentIncome: Int
+  miscIncome: Int
+  passiveIncome: Int
+  variableIncome: Int
+}
+
+input DeleteIncomeInput {
+  id: ID!
+}
+
+input TableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input TableFloatFilterInput {
+  between: [Float]
+  contains: Float
+  eq: Float
+  ge: Float
+  gt: Float
+  le: Float
+  lt: Float
+  ne: Float
+  notContains: Float
+}
+
+input TableIDFilterInput {
+  beginsWith: ID
+  between: [ID]
+  contains: ID
+  eq: ID
+  ge: ID
+  gt: ID
+  le: ID
+  lt: ID
+  ne: ID
+  notContains: ID
+}
+
+input TableIncomeFilterInput {
+  allowances: TableIntFilterInput
+  earnedIncome: TableIntFilterInput
+  id: TableIDFilterInput
+  investmentIncome: TableIntFilterInput
+  miscIncome: TableIntFilterInput
+  name: TableStringFilterInput
+  passiveIncome: TableIntFilterInput
+  variableIncome: TableIntFilterInput
+}
+
+input TableIntFilterInput {
+  between: [Int]
+  contains: Int
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+  notContains: Int
+}
+
+input TableStringFilterInput {
+  beginsWith: String
+  between: [String]
+  contains: String
+  eq: String
+  ge: String
+  gt: String
+  le: String
+  lt: String
+  ne: String
+  notContains: String
+}
+
+input UpdateIncomeInput {
+  allowances: [Int]
+  earnedIncome: [Int!]
+  id: ID!
+  investmentIncome: [Int]
+  miscIncome: [Int]
+  passiveIncome: [Int]
+  variableIncome: [Int]
+}
