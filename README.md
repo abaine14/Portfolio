@@ -1,7 +1,7 @@
 # Portfolio-Updated-2020
 React.js , Graphql, HTML, CSS, JavaScript and Dependecies
 
-In the attached folders there are snippets of code that connect an input table with Graphql integrations in AWS Appsync, Javascript projects, and other files. 
+In the attached files there are snippets of code that connect an input table with Graphql integrations in AWS Appsync, Javascript projects, and other files. 
 
 <h3>Project One</h3>
 <hr/>
